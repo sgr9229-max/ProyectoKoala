@@ -1,0 +1,24 @@
+Hola profe, aqui la realización de mi trabajo
+
+- Tomé de ejemplo la página de Ragged: https://www.ragged.com.co/
+
+- Decidí irme por el camino del manejo de .scss que me parece muy interesante por el uso de los partials e hice uso de los íconos de Bootstrap | Aún debo practicar
+
+- En los archivos index.html y demás partials .scss comenté mi proceso a la hora de enfrentarme a problemas y hallar soluciones
+
+- También agregué fotos de evidencia de trabajo en la carpeta 'evidencia de trabajo'
+
+- A medida del desarrollo del trabajo te vas a dar cuenta de que paulatinamente iba entendiendo mejor el funcionamiento de las etiquetas y demas elementos,
+si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo aprendido en el proceso
+
+- Creé una página en construcción para direccionar la mayoría de links.
+
+
+FUENTES:
+
+- Hacer una grid: https://youtu.be/e6wAHRf3H8Y?si=tEp4-x4EcFFrQznA
+
+- Hacer un carrito: https://youtu.be/DhHnIEnOTlE?si=nIBYlAWt6GbBe8v_
+
+- Explicación y uso adecuado de etiquetas: https://www.w3schools.com/html/default.asp
+

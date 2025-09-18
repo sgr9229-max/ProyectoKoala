@@ -1,0 +1,18 @@
+//PARTIALS [atRule]
+
+//"_grid-base";// Los estilos de este partial la utilizaré de forma individual dentro de otros partials .scss en se que se halle la necesidad de utilizar esta configuración. '@foward' //cuadrícula base para trabajar el Layout; la utilizaré en mixin en '_navbar-2'
+
+@use "_reset"; // 
+@use "_base"; //body
+@use "_navbar-1"; //barra de navegación 1 (Texto animado + 2 links | Comienzo del header)
+@use "_navbar-2"; //barra de navehación 2 (Logo + Barra de búsqueda + tres botones con íconos)
+@use "_navbar-3"; //barra de navegación 3 (menú de opciones | fin del header)
+@use "_carrusel"; //Container con fotos  (inicio de la section)
+@use "_video-products"; //sección del video con la flexbox en dos columnas
+@use "_info"; //Barra de información | Comienzo del footer
+@use "_footer";//Barra de menú footer | Ubicado en la mitad de footer
+
+
+//Página en construcción
+
+@use "_under-construction" //Página en construcción

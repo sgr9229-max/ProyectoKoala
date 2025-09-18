@@ -1,0 +1,52 @@
+@use "grid" as *;
+
+//Implementación del partial "_grid"
+
+.under-construction .gs\:grid {
+
+    @include grid-system (2, 0);
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.under-construction{
+    min-height: 100vh; //total de la página en blanco
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: white;  
+}
+
+.col-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.under-construction-koala {
+    height: 250px;
+}
+
+// Estilo del título y párrafo
+
+.under-construction-title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.under-construction-text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    color: #362f2f;
+}
+
+.under.under-construction-link{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    color: #431e1e;
+    text-decoration: none; //sin subrayado
+}

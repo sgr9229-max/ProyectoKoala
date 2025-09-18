@@ -1,0 +1,116 @@
+.footer {
+    width: 100%;
+    background-color: #1a1a1a; // Fondo oscuro similar a la imagen
+    color: #fff; // Texto claro
+    padding: 40px 200px; // Espaciado vertical y horizontal
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 columnas
+    gap: 30px; // Espacio entre columnas
+    margin: 0 auto;
+    
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: white;
+        
+        a {
+            text-decoration: none; //Título de la columna
+            color: white;
+        }
+
+    }
+
+    ul.footer-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                color: #b0b0b0; // color de enlaces
+                text-decoration: none;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                line-height: 1.5;
+
+                    &:hover {
+                        color: #fff; // Blanco al pasar el mouse
+                    }
+            }
+        }
+    }
+}
+
+  // Estilo para la columna de la marca
+    .brand {
+        h3 {
+            font-size: 28px; // Tamaño de <h3> KOALA </h3
+            margin-bottom: 20px;
+        }
+
+    .social-icons {
+        display: flex;
+        gap: 15px; // Espacio entre íconos
+        margin-bottom: 20px;
+
+        a {
+            color: #b0b0b0;
+            font-size: 22px;
+            &:hover {
+            color: white;
+            
+        }
+    }
+    }
+
+    .contact {
+        p {
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #b0b0b0;
+
+        i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        a {
+            color: #b0b0b0;
+            text-decoration: none;
+
+                &:hover {
+                color: #fff;
+                }
+            }
+        }
+    }
+}
+
+  // Responsividad generada con IA | Aún estoy aprendiendo sobre la responsividad, se de lo que se trata pero como estrudiante debo profundizar
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // Una columna en móviles
+            padding: 20px 20px;
+
+            .footer-column {
+                margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

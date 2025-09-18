@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOALA</title>
+
+    <!--NOTA 1: Más explicaciones y comentarios sobre mis consultas se encontrarán en los __partials .scss-->
+    <!--NOTA 2: Los logos, fotos y video fueron obtenido gracias a IA-->
+    <!--NOTA 3: Consulté como hacer una grid y la utilicé solo en el header, pues quería tener una idea de como funcionan los container de bootstrap | Partial: _grid.scss | Más adelante utilizo la grid que contiene.scss | Partial: _grid.scss-->
+    <!--NOTA 4: Quería hacer lo del carrito de compra, pero no me dió tiempo e implica muchos conocimientos sobre javascript que aún no tengo-->
+    <!--NOTA 5: Me basé en la página de RAGGED para hacer la página-->
+
+
+    <!--LINKS DE ARCHIVOS-->
+    <link rel="stylesheet" href="./css/styles.css"> <!--Estilos sass compilados-->
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"> <!--Iconos de Bootstrap-->
+
+    <!--SCRIPTS-->
+    <script src="./js/auto-play-carrusel.js"></script> <!--Autoplay del carrusel-->
+
+</head> 
+
+<body>
+    <header class="header">
+
+    <!--PRIMER CONTAINER: parcial: _navbar-1 | con ayuda de GitHub Copilot adapté un texto deslizante -(Que aún me estoy esmerando en entender sus propiedades para aplicar manualmente)-; y dos links en la parte derecha-->
+    <div class="navbar-1">
+        <div class="container__header-top">
+            <div class="gs:grid">
+                <div class="col-10">
+                        <span class="navbar-1__animated-text">KOALA #Naturalmente Tú</span>
+                        <span class="navbar-1__animated-text">Envíos gratis por compras desde $200.000cop</span>
+                        <span class="navbar-1__animated-text">KOALA #Naturalmente Tú</span>
+                        <span class="navbar-1__animated-text">Devoluciones sin costo Aplican TyC</span>
+                </div>
+            
+                <div class="col-2 navbar-1__links col-ex">
+                    
+                        <a href="./pagina-en-construccion.html"> Ayuda </a>
+                        <a href="./pagina-en-construccion.html"> Encuentra nuestras tiendas </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SEGUNDO CONTAINER: parcial: _navbar-2 | Logo + barra de búsqueda + 3 íconos | Instalé a BoostrapIcons | -->
+
+    <div class="navbar-2">
+        <!--navbar-2-->
+        <div class="container">
+            <div class="gs:grid">
+                <div class="col-4">
+                    <div class="col-ex">
+                        <img src="./ImagesKoala/Logo/Logo&Eslogan-Koala.png" class="logo-koala">
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="col-ex">
+                        <!--Espacio-->    
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <!-- barra de búsqueda dirigida a Google | importante la etiqueta form, la action; en el input el 'name="q"'-->
+                    <div class="col-ex"> 
+                        <form class="search-bar" role="search" action="https://www.google.com.co/search" method="GET" target="_blank">
+                            <input type="text" name="q" placeholder="Buscar" class="search-bar" aria-label="buscar">
+                            <button type="submit"><i class="bi bi-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-2 col-ex">
+                        <!--Iconos de la parte superior derecha-->
+                        <div class="col-ex col-navbar-2-top-icons">
+                            <button><i class="bi bi-person"></i></button>
+                            <button><i class="bi bi-heart"></i></button>
+
+                            <!--Cart-->
+                            <button id="cartMenuBtn"><i class="bi bi-bag-heart"></i></button>  
+                        </div>    
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <!--navbar-3: Aquí hice uso de la grid, utilicé 2 links y un dropdown-->
+<div class="navbar-3-menu">
+    <div class="gs:grid">
+        
+        <div class="col-2">
+            <div class="col-ex">
+                Mujeres
+            </div>
+        </div>
+
+        <div class="col-2">
+            <div class="col-ex">
+                    Hombres
+            </div>
+        </div>
+    
+        <div class="col-2 dropdown-menu">
+            <div class="col-ex">
+                <a href="">Temporadas</a>
+                    <ul class="dropdown">
+                        <li><a href="./pagina-en-construccion.html">Primavera</a></li>
+                        <li><a href="./pagina-en-construccion.html">Verano</a></li>
+                        <li><a href="./pagina-en-construccion.html">Otoño</a></li>
+                        <li><a href="./pagina-en-construccion.html">Invierno</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+<section class="carrusel--">
+<!--Carrusel de Fotografias y productos | en este punto del trabajo tengo una mejor idea de cómo distribuir mejor los objetos en los <div> y no redundar tanto-->
+
+<div class="promo-section">
+    <div class="carousel-container">
+        <!-- Radio buttons para el control del slide -->
+            <input type="radio" name="carousel" id="slide1" checked>
+            <input type="radio" name="carousel" id="slide2">
+            <input type="radio" name="carousel" id="slide3">
+            <input type="radio" name="carousel" id="slide4">
+
+        <!-- Slides -->
+            <div class="carousel-slides">
+                <div class="slide"><img src="./ImagesKoala/Fotos_carrusel/model-1-carrusel.jpg" alt="Foto 1" ></div>
+                <div class="slide"><img src="./ImagesKoala/Fotos_carrusel//model-2-2-carrusel.jpg" alt="Foto 2" ></div>
+                <div class="slide"><img src="./ImagesKoala/Fotos_carrusel//model-2-carrusel.jpg" alt="Foto 3" ></div>
+                <div class="slide"><img src="./ImagesKoala/Fotos_carrusel//model-2-2-carrusel.jpg" alt="Foto 4"></div>
+            </div>
+
+        <!-- Controles (botones de navegación) -->
+            <div class="carousel-controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+            </div>
+    </div>
+
+
+    <!--Promociones-->
+    <div class="promo-content">
+        <h2>Promociones!</h2>
+        <p>Aprovecha esta temporada con nuestras ofertas exclusivas !!!</p>
+    </div>
+</div>
+</section>
+
+<section class="video-products">
+
+    <!--En esta sección quiero un video en la parte izquierda y 3 productos en flexbox en la parte derecha-->
+
+    <!--columna izquierda: video | El reto es que el video tenga un loop infinito y se reproduzca solo-->
+        <div class="video-container">
+            <video loop autoplay muted> <!--No tiene controls para que no pare el usuario; loop infinito; autoplay para que se reproduzca a la hora de cargar la página; muted por si tiene sonido-->
+                <source src="./videos/Video-spring-outfit.mp4" title="video-spring-outfit" type="video/mp4"></video> <!--Tuve problemas con la etiqueta 'iframe' así que decidí utilizar la etq 'video'-->
+            </video>
+        </div>
+
+
+    
+
+    <!-- Columna derecha: artículos | Utilizaré flexbox en .scss-->
+    <div class="products">
+
+        <div class="product-card">
+            <img src="./ImagesKoala/Fotos_flexbox/Outfit-1.png" alt="Outfit-1">
+            <h3>Outfit 1</h3>
+            <p>$230.000</p>
+            <div class="button-container">
+                <button>Comprar</button>
+                <button>Añadir a la bolsa</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./ImagesKoala/Fotos_flexbox/Outfit-2.png" alt="Outfit-2">
+            <h3>Outfit 2</h3>
+            <p>$220.000</p>
+            <div class="button-container">
+                <button>Comprar</button>
+                <button>Añadir a la bolsa</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="./ImagesKoala/Fotos_flexbox/Outfit-3.png" alt="Outfit-3">
+            <h3>Outfit 3</h3>
+            <p>$210.000</p>
+            <div class="button-container">
+                <button>Comprar</button>
+                <button>Añadir a la bolsa</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+
+    <!--Inicio del footer | Quiero 3 columnas que almacenen información e íconos |-->
+
+    <div class="info">
+
+        <div class="info-text">
+            <i class="bi bi-truck"></i>
+            <h4>ENVÍOS</h4>
+            <p>Envío gratis por compras iguales o superiores a $ 200.000</p>
+        </div>
+
+
+        <div class="info-text">
+            <i class="bi bi-bootstrap-reboot"></i>
+                <h4>DEVOLUCIONES</h4>
+                <p>Si tienes algún inconveniente con tu pedido puedes devolverlo sin costo</p>
+        </div>
+
+
+        <div class="info-text">
+            <i class="bi bi-info-circle"></i>
+                <h4>AYUDA</h4>
+                <p>Línea única de servicio al cliente 333-3333<br><br>Correo: servicioalcliente@koala.com</p>
+        </div>
+    </div>
+
+    <!--Parte media del footer | Quiero 3 columnas que almacenen links en forma vertical y 1 donde esté el logo de la empresa e íconos de redes sociales-->
+
+    <div class="footer">
+        <div class="footer-column brand">
+                <h3>KOALA</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a> <!--target="blank" atributo que indica que el enlace se abrirá en una nueva pestaña o ventana del navegador-->
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter-x"></i></a> <!--rel="noopener y noreferrer" atributo que el sitio de destino que no acceda a los datos de la ventana original. Protege vulnerabilidades seguridad-->
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                        <a href="https://co.pinterest.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-pinterest"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i></a>
+                    </div>    
+                <div class="contact">
+                    <p><i class="bi bi-whatsapp">WPP: 33333333</i></p>
+                    <p><i class="bi bi-envelope"></i><a href="./pagina-en-construccion.html">servicioalcliente@koala.com</a></p>
+                </div>
+        </div>
+        
+
+        <div class="footer-column">
+            <h3><a href="./pagina-en-construccion.html">SERVICIO AL CLIENTE</a></h3>
+                <ul class="footer-menu">
+                    <li><a href="./pagina-en-construccion.html">Mi cuenta</a></li>
+                    <li><a href="./pagina-en-construccion.html">Estados de pedidos</a></li>
+                    <li><a href="./pagina-en-construccion.html">Pagos PSE</a></li>
+                    <li><a href="./pagina-en-construccion.html">Redención de códigos promocionales</a></li>
+                    <li><a href="./pagina-en-construccion.html">Reclamos consultas habeas data y protección de datos</a></li>
+                </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3><a href="./pagina-en-construccion.html">A CERCA DE KOALA</a></h3>
+                <ul class="footer-menu">
+                    <li><a href="./pagina-en-construccion.html">Sobre nosotros</a></li>
+                    <li><a href="./pagina-en-construccion.html">Localizador de tiendas</a></li>
+                    <li><a href="./pagina-en-construccion.html">Trabaja con nosotros</a></li>
+                    <li><a href="./pagina-en-construccion.html">Términos y condiciones de uso del sitio web</a></li>
+                    <li><a href="./pagina-en-construccion.html">Términos y condiciones de promociones y/o descuentos</a></li>
+                </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3><a href="./pagina-en-construccion.html">ÉTICA Y CUMPLIMIENTO</a><h3></h3>
+                <ul class="footer-menu">
+                    <li><a href="./pagina-en-construccion.html">Aviso para el tratamiento de datos personales</a></li>
+                    <li><a href="./pagina-en-construccion.html">Marco legal E-commerce</a></li>
+                    <li><a href="./pagina-en-construccion.html">Política de devoluciones</a></li>
+                    <li><a href="./pagina-en-construccion.html">Política de prevención LAFT - FPADM</a></li>
+                    <li><a href="./pagina-en-construccion.html">Programa de transparencia</a></li>
+                    <li><a href="./pagina-en-construccion.html">Código de Ética y Conducta</a></li>
+                    <li><a href="./pagina-en-construccion.html">Proceso vinculación clientes</a></li>
+                    <li><a href="./pagina-en-construccion.html">Proceso vinculación proveedores</a></li>
+                </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+//Columna 1: video
+
+.video-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // dos columnas iguales
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: stretch; //ambos lados ocupan la misma altura
+
+    .video-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+            video{
+                width: 50%;
+                height: 100%;
+                max-width: 100%;
+                border-radius: 10px; //bordes romos
+                vertical-align: top; // Evita márgenes adicionales
+                object-fit: contain; // Mantiene las dimensiones del video y evita la distorción
+            }
+        }
+    }
+
+
+//Columna 2: Flexbox (.products) con artículos | Reto: Igualar las alturas del video y las tarjetas.
+
+    .products {
+        display: flex;
+        flex-direction: row; //Alinea horizontalmente las flexbox o tarjetas
+        gap: 20px;
+        justify-content: space-between; // Distribuye equitativamente el espacio entre las tarjetas
+        height: 100%;
+
+        .product-card {
+            background: #fff; //color de la tarjeta
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease; // animación de la tarjeta cuando se pone el cursor
+            flex: 1; // Se ajustan las tarjetas por igual
+            justify-content: space-between;
+            height: 100%; // La tarjeta ocupa toda la altura
+            
+            
+            &:hover {
+                transform: translateY(-5px); //sombra cuando se pone el cursor
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                margin: 5px 0;
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #333;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px; // Espacio entre los botones
+                margin-top: 40px; // Espacio superior para separar del precio
+
+                button {
+                    padding: 10px;
+                    font-size: 0.9rem;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #80763d; // Color del botón "Comprar"
+                    color: white;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+
+                        &:hover {
+                            background-color: #917e13; // color al pasar el mouse
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #80763d; // color del botón "Añadir a la bolsa"
+
+                        &:hover {
+                            background-color: #917e13; // color al pasar el mouse
+                        }
+                    }
+                }
+            }
+        }
+    }

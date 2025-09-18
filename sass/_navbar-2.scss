@@ -1,0 +1,77 @@
+@use "grid" as *;
+
+.navbar-2 .gs\:grid {
+    
+    @include grid-system(4, 0);
+        width: 70%; //reducir o aumentar las márgenes - horizontalmente - del grid
+        margin: 0 auto; //centrar horizontalmente
+        align-items: center; //centrar verticalmente
+}
+
+//COLOR DE FONDO DEL CONTAINER 2
+$background-color-navbar-2: #fffaee;
+
+.navbar-2 {
+    background: $background-color-navbar-2;
+    width: 100%;
+}
+
+//LOGO
+.logo-koala {
+    height: 110px;
+}
+
+//BARRA DE BÚSQUEDA
+.search-bar{
+    display: flex;
+    background-color: #ebad3b3f;
+    width: 200px; //largo de la barra de búsqueda
+    height: 40px; //alto de la barra de búsqueda
+    border: none; //borrar los bordes
+    border-radius: 20px; //bordes romos
+    padding: 0px 10px;
+
+
+input {
+    border: none; //El borde con que viene el input
+    background: transparent;
+    outline: none; //Una especie de borde que rodea la caja
+    font-size: 1rem;
+    flex: 1;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer; //cursor del mouse
+    color: #80763d;
+    font-size: 1.6rem; //tamaño del ícono búscar "bi-search"
+    display: flex;
+    align-items: center;
+}
+}
+
+//ICONOS
+
+.col-navbar-2-top-icons {
+    display: flex;
+    justify-content: center; //Alineación en la mitad
+    padding: 20px;//Espacio de la caja donde estan los elementos
+    gap: 24px; //Espacio entre los elementos
+
+    button {
+        background: none; //sin fondo
+        border: none; //sin bordes donde se alojan las imágenes de los íconos
+        cursor: pointer;
+        padding: 0;
+    }
+
+    i {
+        color: #80763d;
+        font-size: 2rem;
+    }
+
+    button:hover i {
+        color:#000;
+    }
+}

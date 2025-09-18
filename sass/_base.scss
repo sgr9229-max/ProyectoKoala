@@ -1,0 +1,10 @@
+//////PARTIAL_BASE/////
+
+//Creación de la variable 'color-koala'
+$color-koala: rgb(40, 164, 177);
+
+//
+body {
+    background-color: $color-koala;
+    font-size: 14px;
+}

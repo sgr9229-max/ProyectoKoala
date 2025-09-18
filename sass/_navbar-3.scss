@@ -1,0 +1,53 @@
+@use "grid" as *;
+
+.navbar-3-menu .gs\:grid {
+
+    @include grid-system(4,0);
+        width: 70%; // margen horizontal de la grid
+        margin: 0 auto;
+        align-items: center; //alinear items dentro de cada rejilla en la grid
+        justify-content: center; // alinear el conjunto de elementos al centro horizontalmente
+}
+
+.navbar-3-menu {
+    background: #fffaee;
+    width: 100%;
+    display: flex; // Me ayudó a acomodar los elementos del menú en la grid horizontalmente
+    justify-content: center; //Elementos centrados
+    text-decoration: none; //Sin subrayado
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; //letra
+    font-weight: Bold; //negrita
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: relative;
+
+    &:hover {
+        background: rgb(210, 106, 106); //Sombreado al poner el cursor sobre la grid del dropdown
+        }
+    
+    a {
+        text-decoration: none; //eliminación del subrayado de "Temporadas"
+    }
+    
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        list-style: none;
+        border: 1px solid #ccc;
+        z-index: 999; // se asegura que sea prioritario antes que cualquier objeto en el html, es decir a que el dropdown no lo tape otra sección (La del contenido - Section)
+
+        li {
+            padding: 0.5rem 1rem;
+        }
+    }
+
+        &:hover .dropdown {
+        display: block;
+        }
+}

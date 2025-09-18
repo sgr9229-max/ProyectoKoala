@@ -1,0 +1,89 @@
+// SISTEMA DE GRID --> Lo investigué para que el sistema de columnas funcionara como los containers de Bootstrap
+
+//Se definen las variables
+$cols: 12; //# de columnas
+$gap: 0; // espacio entre las columnas
+
+.container{
+    width: 100%;
+    margin: 0 auto; //Para que siempre esté centrado
+    padding-left: calc($gap / 2); //Habrá una separación de 24px, debe tender un padding de la mitad
+    padding-right: calc($gap / 2);
+}
+
+.gs\:grid{
+    display: flex;
+    flex-wrap: wrap; //En caso de que me pase del limite de columnas (12), saltar a la siguiente línea
+    margin-right: calc($gap / -2); //Margen negativo. La mitad de $gap
+    margin-left: calc($gap / -2);
+}
+
+//columna automática
+/*.col{
+    flex: 1 0 0;
+}*/
+
+//selector por clase: agrega los siguientes estilos a cualquier elemento que tenga el texto 'col-'
+[class*="col-"],
+.col{
+    width: 100%;
+    max-width: 100%;
+    padding-left: calc($gap / 2); //separación de columnas. La mitad de $gap
+    padding-right: calc($gap / 2);
+}
+
+//Un bluce para definir un ancho de columnas definido haciendo uso de la interpolación
+/* @for $col from 1 through $cols{
+    .col-# { $col }{
+        flex: 0 0 (100% / $cols) * $col;//el 100% del espacio divido el # de columnas, multiplicado por el tamañao máximo de cada una de las columnas
+        max-width:(100% / $cols) * $col;
+    }
+} */
+
+//Instaurar el responsive de la grid con mixin. De nuevo utilizo la interpolación para reemplazar valores por el argumento '$mq'
+
+//columna automática
+@mixin grid-system($mq){
+    .#{ $mq }{
+    flex: 1 0 0;
+    }
+
+    //bucle + interpolación
+    @for $col from 1 through $cols{
+    .#{ $mq }-#{ $col }{
+        flex: 0 0 calc(100% / $cols) * $col;
+        max-width: calc(100% / $cols) * $col;
+    }
+    }
+}
+
+//Para definir las columnas tengo que hacer uso de la mixin
+@include grid-system (col);
+
+//Para implementar el sistema de grid funcione de manera responsiva se utiliza la media querie
+
+@media screen and (min-width: 578px){
+    @include grid-system(sm\:col);
+}
+
+@media screen and (min-width: 1024px){
+    @include grid-system(dm\:col);
+}
+
+//////////////////////VISUALIZACIÓN DEL GRID///////////////////////
+.col-ex {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    place-items: center;
+    //border: 1px solid #b73333 !important; // La utilizo para visualizar la grid | NO OLVIDAR DESACTIVAR!
+}
+
+//////////////////////////////////////////////////////////////////
+
+//MIXIN
+@mixin grid-system($cols: 12, $gap: 0) {
+    display: flex;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $gap;
+}

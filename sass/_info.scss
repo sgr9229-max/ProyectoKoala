@@ -1,0 +1,21 @@
+.info{
+    display: grid; //Para que me permita dividir las columnas posteriormente
+    grid-template-columns: 1fr 1fr 1fr; //3 columnas iguales
+    gap: 20px;
+    margin: 0 auto;
+    align-items: stretch;
+    background: white;
+    width: 100%;
+    padding: 10px; // Para que los elementos no queden tan cerca del borde del contenedor
+
+    .info-text{
+        text-align: center; //alineación del texto al centro
+        color:rgb(108, 105, 105);//color del texto
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; //fuente del texto
+        
+        
+        i{
+            font-size: 30px; //En los casos de los íconos, el tamaño se modifica desde el font-size
+        }
+    }
+}

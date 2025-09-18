@@ -1,0 +1,69 @@
+// la sintaxis '__&' hace referencia al padre, en este caso '.nav-1'
+@use "grid" as*;
+
+.nav-1 .gs\:grid {
+
+    @include grid-system(2 , 0);//dos columnas
+    width:100%;
+
+}
+
+.navbar-1 {
+    background: black; //fondo del contenedor
+
+}
+
+.navbar-1__links {
+    width: 100%;
+    display: flex;
+    gap: 40px; // espacio entre los links
+    cursor: pointer;
+    
+
+    a{
+        color:#fff; //color de los links
+        text-decoration: none; //sin subrayado
+        top: 50%;
+    }
+
+}
+
+
+//TEXTO ANIMADO
+
+// Contenedor relativo para el texto animado
+.col-10 {
+    position: relative;
+    height: 30px; // Ajusta según tu diseño
+    align-items: center;
+}
+
+.col-2 {
+    position: relative; // No olvidar ajustar las columnas!
+}
+
+// TEXTO ANIMADO SECUENCIAL
+.navbar-1__animated-text {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    animation: fadeInOut 8s linear infinite;
+    left: 0;
+    width: 112%; // Calculé un "centro" estético
+    text-align: center;
+    font-size: 1rem;
+    color: #fff; //Color del texto animado
+}
+
+.navbar-1__animated-text:nth-child(1) { animation-delay: 0s; }
+.navbar-1__animated-text:nth-child(2) { animation-delay: 2s; }
+.navbar-1__animated-text:nth-child(3) { animation-delay: 4s; }
+.navbar-1__animated-text:nth-child(4) { animation-delay: 6s; }
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    25% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
