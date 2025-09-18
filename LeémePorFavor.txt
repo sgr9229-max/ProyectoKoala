@@ -13,7 +13,7 @@ si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo apre
 
 - Creé una página en construcción para direccionar la mayoría de links.
 
--Enlacé mi proyecto con GitHub, a continuación escribiré el precso en la terminal:
+-Enlacé mi proyecto con GitHub, a continuación escribiré el proceso en la terminal:
 
     1- brew install git
     2- git config --global user.name " "
