@@ -13,6 +13,16 @@ si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo apre
 
 - Creé una página en construcción para direccionar la mayoría de links.
 
+-Enlacé mi proyecto con GitHub, a continuación escribiré el precso en la terminal:
+
+    1- brew install git
+    2- git config --global user.name " "
+    3- git config --global user.email " "
+    4- localizar la carpeta donde está el proyecto y escribir: git init --> creará un archivo oculto que enlazará el proyecto a GitHub
+    5- git branch -m master --> | cambiar la palabra master por la palabra main para mayor comodidad en un futuro
+    6- git add . -->  añadir toda la carpeta toda está el proyecto
+    7- git commit -m "comentario personalizado"
+    8- git remote add origin <url del proyecto>
 
 FUENTES:
 
