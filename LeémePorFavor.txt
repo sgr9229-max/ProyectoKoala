@@ -1,4 +1,4 @@
-Hola profe, aqui la realización de mi trabajo | Te lo envío comprimido para que lo puedas correr en pc y en GitHub para satisfacer el punto de publicar una página web
+Hola profe, aqui la realización de mi trabajo | Te lo envío comprimido para que lo puedas correr en pc; y en el link del repositorio GitHub para satisfacer el punto de publicar una página web
 
 - Tomé de ejemplo la página de Ragged: https://www.ragged.com.co/
 
@@ -6,14 +6,16 @@ Hola profe, aqui la realización de mi trabajo | Te lo envío comprimido para qu
 
 - En los archivos index.html y demás partials .scss comenté mi proceso a la hora de enfrentarme a problemas y hallar soluciones
 
+- index.html es la página principal 
+
 - También agregué fotos de evidencia de trabajo en la carpeta 'evidencia de trabajo'
 
-- A medida del desarrollo del trabajo te vas a dar cuenta de que paulatinamente iba entendiendo mejor el funcionamiento de las etiquetas y demas elementos,
-si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo aprendido en el proceso
+- A medida del desarrollo del trabajo te vas a dar cuenta de que paulatinamente iba entendiendo mejor el funcionamiento de las etiquetas y demás elementos.
+Si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo aprendido en el proceso
 
-- Creé una página en construcción para direccionar la mayoría de links.
+- Creé una "página en construcción" para direccionar la mayoría de links.
 
--Enlacé mi proyecto con GitHub, a continuación escribiré el proceso en la terminal:
+- Enlacé mi proyecto con GitHub, a continuación escribiré el proceso en la terminal:
 
     1- brew install git
     2- git config --global user.name " "
@@ -31,10 +33,12 @@ si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo apre
     3- git push origin main | "main" es el nombre de la rama principal en este caso
 
 
+
+url del repositorio: https://github.com/sgr9229-max/ProyectoKoala 
 url de la página: https://sgr9229-max.github.io/ProyectoKoala/ // 
 
 
-Conclusión respecto a levantar la página con ayuda de GitHub: 
+Conclusiones respecto a levantar la página con ayuda de GitHub: 
 - Aún me falta trabajar los elementos de forma responsiva. En pc se ve bien.
 - A la hora de levantar la página no sé porque algunas links no funcionan adecuadamente con la página de construcción: Si tuviese más tiempo lo corregiría
 - La página de construcción a perdido el logo del koala, pero en vsCode se ve bien
