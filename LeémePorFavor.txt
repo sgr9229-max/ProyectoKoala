@@ -1,4 +1,4 @@
-Hola profe, aqui la realización de mi trabajo
+Hola profe, aqui la realización de mi trabajo | Te lo envío comprimido para que lo puedas correr en pc y en GitHub para satisfacer el punto de publicar una página web
 
 - Tomé de ejemplo la página de Ragged: https://www.ragged.com.co/
 
@@ -23,6 +23,23 @@ si hubiese dispuesto de más tiempo, hubiera pulido el trabajo acoplando lo apre
     6- git add . -->  añadir toda la carpeta toda está el proyecto
     7- git commit -m "comentario personalizado"
     8- git remote add origin <url del proyecto>
+
+    Para actualizar un archivo modificado
+
+    1- git add .
+    2- git commit -m "nuevos cambios"
+    3- git push origin main | "main" es el nombre de la rama principal en este caso
+
+
+url de la página: https://sgr9229-max.github.io/ProyectoKoala/ // 
+
+
+Conclusión respecto a levantar la página con ayuda de GitHub: 
+- Aún me falta trabajar los elementos de forma responsiva. En pc se ve bien.
+- A la hora de levantar la página no sé porque algunas links no funcionan adecuadamente con la página de construcción: Si tuviese más tiempo lo corregiría
+- La página de construcción a perdido el logo del koala, pero en vsCode se ve bien
+
+
 
 FUENTES:
 
